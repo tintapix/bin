@@ -1,0 +1,14 @@
+v_shader
+{	
+	file {"v_image.glsl"},		
+	auto#cam {"cameraView"},
+	//auto#timer {"timeElapsed"},
+	//manual#float#period { 100.0 }	
+},
+f_shader
+{	
+	file {"f_image.glsl"},	
+	// no texture, call game.materialparam late
+	//manual#texture#textureImage {""},	
+	manual#texture#textureImage {"tree.png"},	
+},

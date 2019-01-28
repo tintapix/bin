@@ -1,0 +1,49 @@
+﻿/*
+	Список параметров
+	
+	Shader_paths - перечисление путей к шейдерным программам
+	Texture_paths - перечисление путей к текстурам
+	Material_paths - перечисление путей к материалам
+	is_fullscreen - полноэкранный режим, если true, width и height игнорируются
+	show_console - признак оказа консоли команд
+	log_name - имя файла вывода, если нет то и файла не будет
+	is_titled - признак окна в НЕ полноэкраном режиме, если true - то заголовок у окна будет
+	is_perspective - для настройки камеры главного вида - прямоугольная  призма или нет
+	screenshot_type - расширение файла скриншотов: png, jpg
+	width - еслин еполноэкранный режим то длина окна
+	height - еслин еполноэкранный режим то высота окна
+	start_script - выполнить скрипт lua при запуске
+*/
+
+
+
+Shader_paths{	
+	"Shaders"	//GLSL shaders		
+	
+},
+Texture_paths {
+	"Textures"
+},
+Material_paths {
+	"Materials"
+},
+
+// режим полного экрана
+is_fullscreen = false,
+
+show_console = true,
+
+log_name = "Logfile.log",
+
+// заголовок окна
+is_titled = true,
+
+is_perspective = true,
+
+screenshot_type = "png",
+//start_script = "1_test.lua",
+//ширина окна
+width  = 800,
+// высота окна
+height  = 800,
+	

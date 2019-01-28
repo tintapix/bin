@@ -1,0 +1,105 @@
+Copyright (C) 2011 - 2019 Mikhail Evdokimov 
+tintapix.com
+tintapix@gmail.com  
+
+Materials in Tinta Shape.
+
+
+1. Syntax
+	- Every material must have two secions with shader file names for vertex(v_ prefix) and fragment(f_ prefix) shaders separately
+	even shader have no input parameters
+	v_shader
+	{	
+		file {"v_indicator.c"},
+	},
+	f_shader
+	{	
+		file {"f_demolights.c"},		
+	}
+	- v_shader and f_shader must contain "file" attribute with absolute or relative 
+	  path to the shader file	
+	- v_shader and f_shader may contain "manual#texture" attribute with absolute or relative path to the 
+	  texture
+	
+    - Variables may be of two types: manual and auto
+	for "manual" after symbol "#", folowing variable type and variable name.
+	Braces keep value for manual and variable value name for auto:
+		manual#fVec4#colorA{ 1.0, 1.0, 1.0, 0.0 }
+		auto#camera{"cameraView"}		
+		
+Simple fill with color  material:
+
+v_shader
+{	
+	file {"v_fill.glsl"},
+	auto#cam {"cameraView"}			
+},
+f_shader
+{	
+	file {"f_fill.glsl"},
+	manual#fVec4#color{ 0.94, 1.0, 0.0, 0.0 }	
+	manual#texture#textureSun {"sun.png"},
+}
+
+
+1. Variables types
+
+type 	 description
+
+"bool" - boolean
+"int" - integer
+"uint" - unsigned integer
+"float" - float
+"double" - double
+"bVec2" - boolean vector2
+"bVec3" - boolean vector3
+"bVec4" - boolean vector4
+"iVec2" - integer vector2
+"iVec3" - integer vector3
+"iVec4" - integer vector4
+"uVec2" - unsigned integer vector2
+"uVec3" - unsigned integer vector3
+"uVec4" - unsigned integer vector4
+"fVec2" - float integer vector2
+"fVec3" - float integer vector3
+"fVec4" - float integer vector4
+"dVec2" - double integer vector2
+"dVec3" - double integer vector3
+"dVec4" - double integer vector4
+"fMat2" - float matrix2x2
+"dMat2" - double matrix2x2
+"fMat3" - float matrix3x3
+"dMat3" - double matrix3x3
+"fMat4" - float matrix4x4
+"dMat4" - double matrix4x4
+"texture" - texture
+
+2. Auto variable names list
+"cameraView", 
+"worldMatrix",
+"viewMatrix",
+"projectMatrix",
+"timeElapsed", 
+"cameraPosition", 
+"randReal",
+"entityCenter",
+
+3. Auto variables types
+
+	For manual specify the type:
+		manual#fVec4#color{ 0.94, 1.0, 0.0, 0.0 }, 
+	For Auto the type may  not be specified:
+		auto#cam {"cameraView"}
+		or 
+		auto#timeElapsed {"timeElapsed"},		
+
+	Type 	Variable
+
+	"fMat4" cameraView
+	"fMat4" worldMatrix
+	"fMat4" viewMatrix
+	"fMat4" projectMatrix
+	"float" timeElapsed
+	"fVec3" cameraPosition
+	"float" randReal
+	"fVec3" entityCenter

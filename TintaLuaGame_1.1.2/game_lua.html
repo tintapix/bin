@@ -1,0 +1,474 @@
+﻿<!DOCTYPE html>
+<html>
+<meta charset="utf - 8"> 
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.addaction</h1>
+<p style="background-color:#f2f2f2"> Добавляет действие такое как обработка контролов или таймер<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка тип действия один из вариантов:<br></p>
+<p style="background-color:#f2f2f2">"key_down"<br></p>
+<p style="background-color:#f2f2f2">"key_up"<br></p>
+<p style="background-color:#f2f2f2">"timer"<br></p>
+<p style="background-color:#f2f2f2">Param:  Целое параметр:<br></p>
+<p style="background-color:#f2f2f2">для кнопок - номер кнопки клавиатуры или мыши<br></p>
+<p style="background-color:#f2f2f2">при обработки которой будет выполнено действие<br></p>
+<p style="background-color:#f2f2f2">добавлять можно прямо в 8-ричной системе например game.addaction("button_down",0x11,"key_down.lua"):<br></p>
+<p style="background-color:#f2f2f2">ML_UNASSIGNED  = 0x00,<br></p>
+<p style="background-color:#f2f2f2">ML_ESCAPE      = 0x01,<br></p>
+<p style="background-color:#f2f2f2">ML_1           = 0x02,<br></p>
+<p style="background-color:#f2f2f2">ML_2           = 0x03,<br></p>
+<p style="background-color:#f2f2f2">ML_3           = 0x04,<br></p>
+<p style="background-color:#f2f2f2">ML_4           = 0x05,<br></p>
+<p style="background-color:#f2f2f2">ML_5           = 0x06,<br></p>
+<p style="background-color:#f2f2f2">ML_6           = 0x07,<br></p>
+<p style="background-color:#f2f2f2">ML_7           = 0x08,<br></p>
+<p style="background-color:#f2f2f2">ML_8           = 0x09,<br></p>
+<p style="background-color:#f2f2f2">ML_9           = 0x0A,<br></p>
+<p style="background-color:#f2f2f2">ML_0           = 0x0B,<br></p>
+<p style="background-color:#f2f2f2">ML_MINUS       = 0x0C,<br></p>
+<p style="background-color:#f2f2f2">ML_EQUALS      = 0x0D,<br></p>
+<p style="background-color:#f2f2f2">ML_BACK        = 0x0E,<br></p>
+<p style="background-color:#f2f2f2">ML_TAB         = 0x0F,<br></p>
+<p style="background-color:#f2f2f2">ML_Q           = 0x10,<br></p>
+<p style="background-color:#f2f2f2">ML_W           = 0x11,<br></p>
+<p style="background-color:#f2f2f2">ML_E           = 0x12,<br></p>
+<p style="background-color:#f2f2f2">ML_R           = 0x13,<br></p>
+<p style="background-color:#f2f2f2">ML_T           = 0x14,<br></p>
+<p style="background-color:#f2f2f2">ML_Y           = 0x15,<br></p>
+<p style="background-color:#f2f2f2">ML_U           = 0x16,<br></p>
+<p style="background-color:#f2f2f2">ML_I           = 0x17,<br></p>
+<p style="background-color:#f2f2f2">ML_O           = 0x18,<br></p>
+<p style="background-color:#f2f2f2">ML_P           = 0x19,<br></p>
+<p style="background-color:#f2f2f2">ML_LBRACKET    = 0x1A,<br></p>
+<p style="background-color:#f2f2f2">ML_RBRACKET    = 0x1B,<br></p>
+<p style="background-color:#f2f2f2">ML_RETURN      = 0x1C,<br></p>
+<p style="background-color:#f2f2f2">ML_LCONTROL    = 0x1D,<br></p>
+<p style="background-color:#f2f2f2">ML_A           = 0x1E,<br></p>
+<p style="background-color:#f2f2f2">ML_S           = 0x1F,<br></p>
+<p style="background-color:#f2f2f2">ML_D           = 0x20,<br></p>
+<p style="background-color:#f2f2f2">ML_F           = 0x21,<br></p>
+<p style="background-color:#f2f2f2">ML_G           = 0x22,<br></p>
+<p style="background-color:#f2f2f2">ML_H           = 0x23,<br></p>
+<p style="background-color:#f2f2f2">ML_J           = 0x24,<br></p>
+<p style="background-color:#f2f2f2">ML_K           = 0x25,<br></p>
+<p style="background-color:#f2f2f2">ML_L           = 0x26,<br></p>
+<p style="background-color:#f2f2f2">ML_SEMICOLON   = 0x27,<br></p>
+<p style="background-color:#f2f2f2">ML_APOSTROPHE  = 0x28,<br></p>
+<p style="background-color:#f2f2f2">ML_GRAVE       = 0x29,<br></p>
+<p style="background-color:#f2f2f2">ML_LSHIFT      = 0x2A,<br></p>
+<p style="background-color:#f2f2f2">ML_BACKSLASH   = 0x2B,<br></p>
+<p style="background-color:#f2f2f2">ML_Z           = 0x2C,<br></p>
+<p style="background-color:#f2f2f2">ML_X           = 0x2D,<br></p>
+<p style="background-color:#f2f2f2">ML_C           = 0x2E,<br></p>
+<p style="background-color:#f2f2f2">ML_V           = 0x2F,<br></p>
+<p style="background-color:#f2f2f2">ML_B           = 0x30,<br></p>
+<p style="background-color:#f2f2f2">ML_N           = 0x31,<br></p>
+<p style="background-color:#f2f2f2">ML_M           = 0x32,<br></p>
+<p style="background-color:#f2f2f2">ML_COMMA       = 0x33,<br></p>
+<p style="background-color:#f2f2f2">ML_PERIOD      = 0x34, .<br></p>
+<p style="background-color:#f2f2f2">ML_SLASH       = 0x35, /<br></p>
+<p style="background-color:#f2f2f2">ML_RSHIFT      = 0x36,<br></p>
+<p style="background-color:#f2f2f2">ML_MULTIPLY    = 0x37, * на дополнительной клавиатуре<br></p>
+<p style="background-color:#f2f2f2">ML_LMENU       = 0x38, левый  Alt<br></p>
+<p style="background-color:#f2f2f2">ML_SPACE       = 0x39,<br></p>
+<p style="background-color:#f2f2f2">ML_CAPITAL     = 0x3A,<br></p>
+<p style="background-color:#f2f2f2">ML_F1          = 0x3B,<br></p>
+<p style="background-color:#f2f2f2">ML_F2          = 0x3C,<br></p>
+<p style="background-color:#f2f2f2">ML_F3          = 0x3D,<br></p>
+<p style="background-color:#f2f2f2">ML_F4          = 0x3E,<br></p>
+<p style="background-color:#f2f2f2">ML_F5          = 0x3F,<br></p>
+<p style="background-color:#f2f2f2">ML_F6          = 0x40,<br></p>
+<p style="background-color:#f2f2f2">ML_F7          = 0x41,<br></p>
+<p style="background-color:#f2f2f2">ML_F8          = 0x42,<br></p>
+<p style="background-color:#f2f2f2">ML_F9          = 0x43,<br></p>
+<p style="background-color:#f2f2f2">ML_F10         = 0x44,<br></p>
+<p style="background-color:#f2f2f2">ML_NUMLOCK     = 0x45,<br></p>
+<p style="background-color:#f2f2f2">ML_SCROLL      = 0x46,<br></p>
+<p style="background-color:#f2f2f2">ML_NUMPAD7     = 0x47,<br></p>
+<p style="background-color:#f2f2f2">ML_NUMPAD8     = 0x48,<br></p>
+<p style="background-color:#f2f2f2">ML_NUMPAD9     = 0x49,<br></p>
+<p style="background-color:#f2f2f2">ML_SUBTRACT    = 0x4A,  - на дополнительной клавиатуре<br></p>
+<p style="background-color:#f2f2f2">ML_NUMPAD4     = 0x4B,<br></p>
+<p style="background-color:#f2f2f2">ML_NUMPAD5     = 0x4C,<br></p>
+<p style="background-color:#f2f2f2">ML_NUMPAD6     = 0x4D,<br></p>
+<p style="background-color:#f2f2f2">ML_ADD         = 0x4E,  + на дополнительной клавиатуре<br></p>
+<p style="background-color:#f2f2f2">ML_NUMPAD1     = 0x4F,<br></p>
+<p style="background-color:#f2f2f2">ML_NUMPAD2     = 0x50,<br></p>
+<p style="background-color:#f2f2f2">ML_NUMPAD3     = 0x51,<br></p>
+<p style="background-color:#f2f2f2">ML_NUMPAD0     = 0x52,<br></p>
+<p style="background-color:#f2f2f2">ML_DECIMAL     = 0x53,  . на дополнительной клавиатуре<br></p>
+<p style="background-color:#f2f2f2">ML_OEM_102     = 0x56,    // < > | on UK/Germany keyboards<br></p>
+<p style="background-color:#f2f2f2">ML_F11         = 0x57,<br></p>
+<p style="background-color:#f2f2f2">ML_F12         = 0x58,<br></p>
+<p style="background-color:#f2f2f2">ML_F13         = 0x64,<br></p>
+<p style="background-color:#f2f2f2">ML_F14         = 0x65,<br></p>
+<p style="background-color:#f2f2f2">ML_F15         = 0x66,<br></p>
+<p style="background-color:#f2f2f2">ML_KANA        = 0x70,<br></p>
+<p style="background-color:#f2f2f2">ML_ABNT_C1     = 0x73,<br></p>
+<p style="background-color:#f2f2f2">ML_CONVERT     = 0x79,<br></p>
+<p style="background-color:#f2f2f2">ML_NOCONVERT   = 0x7B,<br></p>
+<p style="background-color:#f2f2f2">ML_YEN         = 0x7D,<br></p>
+<p style="background-color:#f2f2f2">ML_ABNT_C2     = 0x7E,<br></p>
+<p style="background-color:#f2f2f2">ML_NUMPADEQUALS= 0x8D,<br></p>
+<p style="background-color:#f2f2f2">ML_PREVTRACK   = 0x90,<br></p>
+<p style="background-color:#f2f2f2">ML_AT          = 0x91,<br></p>
+<p style="background-color:#f2f2f2">ML_COLON       = 0x92,<br></p>
+<p style="background-color:#f2f2f2">ML_UNDERLINE   = 0x93,<br></p>
+<p style="background-color:#f2f2f2">ML_KANJI       = 0x94,<br></p>
+<p style="background-color:#f2f2f2">ML_STOP        = 0x95,<br></p>
+<p style="background-color:#f2f2f2">ML_AX          = 0x96,<br></p>
+<p style="background-color:#f2f2f2">ML_UNLABELED   = 0x97,<br></p>
+<p style="background-color:#f2f2f2">ML_NEXTTRACK   = 0x99,<br></p>
+<p style="background-color:#f2f2f2">ML_NUMPADENTER = 0x9C,<br></p>
+<p style="background-color:#f2f2f2">ML_RCONTROL    = 0x9D,<br></p>
+<p style="background-color:#f2f2f2">ML_MUTE        = 0xA0,<br></p>
+<p style="background-color:#f2f2f2">ML_CALCULATOR  = 0xA1,<br></p>
+<p style="background-color:#f2f2f2">ML_PLAYPAUSE   = 0xA2,<br></p>
+<p style="background-color:#f2f2f2">ML_MEDIASTOP   = 0xA4,<br></p>
+<p style="background-color:#f2f2f2">ML_VOLUMEDOWN  = 0xAE,<br></p>
+<p style="background-color:#f2f2f2">ML_VOLUMEUP    = 0xB0,<br></p>
+<p style="background-color:#f2f2f2">ML_WEBHOME     = 0xB2,<br></p>
+<p style="background-color:#f2f2f2">ML_NUMPADCOMMA = 0xB3,<br></p>
+<p style="background-color:#f2f2f2">ML_DIVIDE      = 0xB5,<br></p>
+<p style="background-color:#f2f2f2">ML_SYSRQ       = 0xB7,<br></p>
+<p style="background-color:#f2f2f2">ML_RMENU       = 0xB8,<br></p>
+<p style="background-color:#f2f2f2">ML_PAUSE       = 0xC5,<br></p>
+<p style="background-color:#f2f2f2">ML_HOME        = 0xC7,<br></p>
+<p style="background-color:#f2f2f2">ML_UP          = 0xC8,<br></p>
+<p style="background-color:#f2f2f2">ML_PGUP        = 0xC9,<br></p>
+<p style="background-color:#f2f2f2">ML_LEFT        = 0xCB,<br></p>
+<p style="background-color:#f2f2f2">ML_RIGHT       = 0xCD,<br></p>
+<p style="background-color:#f2f2f2">ML_END         = 0xCF,<br></p>
+<p style="background-color:#f2f2f2">ML_DOWN        = 0xD0,<br></p>
+<p style="background-color:#f2f2f2">ML_PGDOWN      = 0xD1,<br></p>
+<p style="background-color:#f2f2f2">ML_INSERT      = 0xD2,<br></p>
+<p style="background-color:#f2f2f2">ML_DELETE      = 0xD3,<br></p>
+<p style="background-color:#f2f2f2">ML_LWIN        = 0xDB,<br></p>
+<p style="background-color:#f2f2f2">ML_RWIN        = 0xDC,<br></p>
+<p style="background-color:#f2f2f2">ML_APPS        = 0xDD,<br></p>
+<p style="background-color:#f2f2f2">ML_POWER       = 0xDE,<br></p>
+<p style="background-color:#f2f2f2">ML_SLEEP       = 0xDF,<br></p>
+<p style="background-color:#f2f2f2">ML_WAKE        = 0xE3,<br></p>
+<p style="background-color:#f2f2f2">ML_WEBSEARCH   = 0xE5,<br></p>
+<p style="background-color:#f2f2f2">ML_WEBFAVORITES= 0xE6,<br></p>
+<p style="background-color:#f2f2f2">ML_WEBREFRESH  = 0xE7,<br></p>
+<p style="background-color:#f2f2f2">ML_WEBSTOP     = 0xE8,<br></p>
+<p style="background-color:#f2f2f2">ML_WEBFORWARD  = 0xE9,<br></p>
+<p style="background-color:#f2f2f2">ML_WEBBACK     = 0xEA,<br></p>
+<p style="background-color:#f2f2f2">ML_MYCOMPUTER  = 0xEB,<br></p>
+<p style="background-color:#f2f2f2">ML_MAIL        = 0xEC,<br></p>
+<p style="background-color:#f2f2f2">ML_MEDIASELECT = 0xED,<br></p>
+<p style="background-color:#f2f2f2">ML_MOUSE_LEFT  = 0xEE,<br></p>
+<p style="background-color:#f2f2f2">ML_MOUSE_MIDDLE = 0xEF,<br></p>
+<p style="background-color:#f2f2f2">ML_MOUSE_RIGHT = 0xF0,<br></p>
+<p style="background-color:#f2f2f2">для таймера время в миллисекундах по истечении которого будет выполнено действие<br></p>
+<p style="background-color:#f2f2f2">например вызывать каждые 2 секунды: game.addaction("timer",2000,"look_around.lua")<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка имя скрипта содержащего действие например "on_key_up.lua" или команда<br></p>
+<p style="background-color:#f2f2f2">Return:  Целое для таймера уникальный идентификатор для остальных nil<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.deltimer</h1>
+<p style="background-color:#f2f2f2"> Удалает таймер<br></p>
+<p style="background-color:#f2f2f2">Param:  Целое идентификатор таймера<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.exit</h1>
+<p style="background-color:#f2f2f2"> Закрывает приложение<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.deltimers</h1>
+<p style="background-color:#f2f2f2"> Удалает все таймеры<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.timers</h1>
+<p style="background-color:#f2f2f2"> Возвращает  количество активных таймеров, вызванных game.addaction( "timer",....) <br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.addgroup</h1>
+<p style="background-color:#f2f2f2"> Добавляет группу для объектов в сцену<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка имя группы<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.delgroup</h1>
+<p style="background-color:#f2f2f2"> Удалает группу из сцены<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка имя группы<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.delgroups</h1>
+<p style="background-color:#f2f2f2"> Очищает сцену от объектов - удалает все группы вместе с объектами<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.setparent</h1>
+<p style="background-color:#f2f2f2"> Задает родительский объект для другого объекта в одной группе. Поворот и перемещения для дочернего объекта становятся <br></p>
+<p style="background-color:#f2f2f2">зависимыми от родительского<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка имя группы<br></p>
+<p style="background-color:#f2f2f2">Param:  Целое порядковый номер дочернего объекта в группе начиная с 0<br></p>
+<p style="background-color:#f2f2f2">Param:  Целое порядковый номер родительского объекта в группе начиная с 0<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.setmaterial</h1>
+<p style="background-color:#f2f2f2"> Задает материал для объекта<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка имя группы<br></p>
+<p style="background-color:#f2f2f2">Param:  Целое порядковый номер <br></p>
+<p style="background-color:#f2f2f2">Param:  Строка имя или путь материалу<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.materialparam</h1>
+<p style="background-color:#f2f2f2"> Задает параметр в материале для объекта<br></p>
+<p style="background-color:#f2f2f2">game.materialparam("demo",0,"fill.material",color,  0.1, 0.3, 0.5)<br></p>
+<p style="background-color:#f2f2f2">game.materialparam("demo",0,"fill.material",angle,  0.1 )<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка имя группы<br></p>
+<p style="background-color:#f2f2f2">Param:  Целое порядковый номер<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка имя материала<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка имя параметра <br></p>
+<p style="background-color:#f2f2f2">Param:  значение параметра в зависимости от параметра(для составных параметров значение разбиваетсмя запятыми таких как вектор или матрица)<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.addobject</h1>
+<p style="background-color:#f2f2f2"> Добавляет объект в группу может быть 2-х вариантов:  game.addobject("Group", 10.0, 10.0, 50.0, "texture.png" )<br></p>
+<p style="background-color:#f2f2f2">game.addobject("Group", 10.0, 10.0, 50.0, 0,255,0 ), если изображение или цвет н езаданы то объект становится невидимым(showobject с параметром false)<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка имя группы<br></p>
+<p style="background-color:#f2f2f2">Param:  Число с плавающей точкой координата x<br></p>
+<p style="background-color:#f2f2f2">Param:  Число с плавающей точкой координата y<br></p>
+<p style="background-color:#f2f2f2">Param:  Число с плавающей точкой габаритный размер(0 можно установить, что бы объект не рисовался, но прискутствовал в сцене)<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка или целое путь к изображению c разрешением .png, .jpg или .jpeg, или материалу с разрешением .material  или компонент цвета r<br></p>
+<p style="background-color:#f2f2f2">Param:  Целое компонент цвета  g<br></p>
+<p style="background-color:#f2f2f2">Param:  Целое компонент цвета  b<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.delobject</h1>
+<p style="background-color:#f2f2f2"> Удаляет объект из группы<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка имя группы<br></p>
+<p style="background-color:#f2f2f2">Param:  Целое порядковый номер объекта в группе начиная с 0<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.rotate</h1>
+<p style="background-color:#f2f2f2"> Повернуть объект на угол, если угол  < 0 то против часовой, иначе по часовой<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка имя группы<br></p>
+<p style="background-color:#f2f2f2">Param:  Целое порядковый номер объекта в группе начиная с 0<br></p>
+<p style="background-color:#f2f2f2">Param:  Число угол в градусах от -360 до 360<br></p>
+<p style="background-color:#f2f2f2">Param:  Необязательный Число с плавающей точкой скорость перемещения градусов в миллисекунду<br></p>
+<p style="background-color:#f2f2f2">Param:  Необязательный Строка команда для выполнения после завершения<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.rotateat</h1>
+<p style="background-color:#f2f2f2"> Повернуть объект в сторону координаты(курсора мыши или др. объекта)<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка имя группы<br></p>
+<p style="background-color:#f2f2f2">Param:  Целое порядковый номер объекта в группе начиная с 0<br></p>
+<p style="background-color:#f2f2f2">Param:  Число координата x <br></p>
+<p style="background-color:#f2f2f2">Param:  Число координата y<br></p>
+<p style="background-color:#f2f2f2">Param:  Необязательный Число с плавающей точкой скорость перемещения градусов в миллисекунду<br></p>
+<p style="background-color:#f2f2f2">Param:  Необязательный Строка команда для выполнения после завершения<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.angle</h1>
+<p style="background-color:#f2f2f2"> Возвращает угол между вектором вперед и вектором к точке для объекта по ближайшей дуге.<br></p>
+<p style="background-color:#f2f2f2">Если точка левее оси объекта угол положительный, если правее то отрицательный<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка группа<br></p>
+<p style="background-color:#f2f2f2">Param:  Целое порядковый номер объекта в группе начиная с 0<br></p>
+<p style="background-color:#f2f2f2">Param:  Число координата точки второго вектора x<br></p>
+<p style="background-color:#f2f2f2">Param:  Число координата точки второго вектора y<br></p>
+<p style="background-color:#f2f2f2">Return:  Число с плавающей точкой угол в градусах<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.moveon</h1>
+<p style="background-color:#f2f2f2"> Смещает объект на значение<br></p>
+<p style="background-color:#f2f2f2">-- движение вниз и влево<br></p>
+<p style="background-color:#f2f2f2">local xMouse, yMouse = game.mousepos()<br></p>
+<p style="background-color:#f2f2f2">game.moveon( "1", 0, -10, -100, 0.0001 , "util.msg(\"finished\")" )<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка имя группы<br></p>
+<p style="background-color:#f2f2f2">Param:  Целое порядковый номер объекта в группе начиная с 0<br></p>
+<p style="background-color:#f2f2f2">Param:  Число с плавающей точкой x<br></p>
+<p style="background-color:#f2f2f2">Param:  Число с плавающей точкой y<br></p>
+<p style="background-color:#f2f2f2">Param:  Необязательный Число с плавающей точкой скорость перемещения пикселей в миллисекунду<br></p>
+<p style="background-color:#f2f2f2">Param:  Необязательный Строка команда для выполнения после завершения<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.zoom</h1>
+<p style="background-color:#f2f2f2"> Устанавливает коэфициент масштабирования - удаление приблежение камеры<br></p>
+<p style="background-color:#f2f2f2">Исходное значение = 1, = 0.5 уменьшит в 2 раза, = 2 увеличит в 2 раза<br></p>
+<p style="background-color:#f2f2f2">Param:  Число с плавающей точкой коэфициент<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.movecamon</h1>
+<p style="background-color:#f2f2f2"> Смещает камеру на корординату<br></p>
+<p style="background-color:#f2f2f2">Param:  Число с плавающей точкой x<br></p>
+<p style="background-color:#f2f2f2">Param:  Число с плавающей точкой y<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.movecamto</h1>
+<p style="background-color:#f2f2f2"> Перемещает камеру в корординату<br></p>
+<p style="background-color:#f2f2f2">Param:  Число с плавающей точкой x<br></p>
+<p style="background-color:#f2f2f2">Param:  Число с плавающей точкой y<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.moveorient</h1>
+<p style="background-color:#f2f2f2"> Смещает объект на значение относительно координат объекта, вперед "+" по x, вправо "+" по y, <br></p>
+<p style="background-color:#f2f2f2"> с учетом  ориентации объекта в пространстве <br></p>
+<p style="background-color:#f2f2f2"> -- движение вперед на 40 единиц со скоростью 0.0001 в милллисек <br></p>
+<p style="background-color:#f2f2f2"> local xMouse, yMouse = game.mousepos()<br></p>
+<p style="background-color:#f2f2f2"> game.moveorient( "1", 0,  0,40, 0.0001 , "util.msg(\"finished\")" )<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка имя группы<br></p>
+<p style="background-color:#f2f2f2">Param:  Целое порядковый номер объекта в группе начиная с 0<br></p>
+<p style="background-color:#f2f2f2">Param:  Число с плавающей точкой x<br></p>
+<p style="background-color:#f2f2f2">Param:  Число с плавающей точкой y<br></p>
+<p style="background-color:#f2f2f2">Param:  Необязательный Число с плавающей точкой скорость перемещения пикселей в миллисекунду<br></p>
+<p style="background-color:#f2f2f2">Param:  Необязательный Строка команда для выполнения после завершения<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.pointorient</h1>
+<p style="background-color:#f2f2f2"> Возвращает координаты точки  относительно координат объекта, вперед "+" по x, вправо "+" по y,<br></p>
+<p style="background-color:#f2f2f2">с учетом  ориентации объекта в пространстве<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка имя группы<br></p>
+<p style="background-color:#f2f2f2">Param:  Целое порядковый номер объекта в группе начиная с 0<br></p>
+<p style="background-color:#f2f2f2">Param:  Число с плавающей точкой x<br></p>
+<p style="background-color:#f2f2f2">Param:  Число с плавающей точкой y<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.moveto</h1>
+<p style="background-color:#f2f2f2"> Передвигает объект в координату( ноль - верхний левый угол окна )<br></p>
+<p style="background-color:#f2f2f2">local xMouse, yMouse = game.mousepos()<br></p>
+<p style="background-color:#f2f2f2">game.moveto( "1", 0, xMouse, yMouse, 0.0001 , "util.msg(\"finished\")" )<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка имя группы<br></p>
+<p style="background-color:#f2f2f2">Param:  Целое порядковый номер объекта в группе начиная с 0<br></p>
+<p style="background-color:#f2f2f2">Param:  Число с плавающей точкой x<br></p>
+<p style="background-color:#f2f2f2">Param:  Число с плавающей точкой y<br></p>
+<p style="background-color:#f2f2f2">Param:  Необязательный Число с плавающей точкой скорость перемещения пикселей в миллисекунду<br></p>
+<p style="background-color:#f2f2f2">Param:  Необязательный Строка команда для выполнения после завершения<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.setcolor</h1>
+<p style="background-color:#f2f2f2"> Устанавливает цвет объектов в группе<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка имя группы<br></p>
+<p style="background-color:#f2f2f2">Param:  Целое индекс объекта<br></p>
+<p style="background-color:#f2f2f2">Param:  Целое r(0-255)<br></p>
+<p style="background-color:#f2f2f2">Param:  Целое g(0-255)<br></p>
+<p style="background-color:#f2f2f2">Param:  Целое b(0-255)<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.setimg</h1>
+<p style="background-color:#f2f2f2"> Устанавливает цвет объектов в группе. game.setimg("enemy", 0, "enemy_dead.png")<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка имя группы<br></p>
+<p style="background-color:#f2f2f2">Param:  Целое индекс объекта<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка имя изображения например: image.png<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.getimg</h1>
+<p style="background-color:#f2f2f2"> Устанавливает цвет объектов в группе. local image = game.getimg("enemy", 0)<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка имя группы<br></p>
+<p style="background-color:#f2f2f2">Param:  Целое индекс объекта<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка имя изображения например: image.png<br></p>
+<p style="background-color:#f2f2f2">Return:  Строка имя изображения или пустую строку.<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.cls</h1>
+<p style="background-color:#f2f2f2"> Очищает консоль от сообщений<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.delobjects</h1>
+<p style="background-color:#f2f2f2"> Удаляет все объекты из группы<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка имя группы<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.setsize</h1>
+<p style="background-color:#f2f2f2"> Устнавливает размер объектов в сцене<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка группа<br></p>
+<p style="background-color:#f2f2f2">Param:  Целое порядковый номер объекта в группе начиная с 0<br></p>
+<p style="background-color:#f2f2f2">Param:  Число с плавающей точкой размер (0 можно установить, что бы объект не рисовался, но прискутствовал в сцене)<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.getsize</h1>
+<p style="background-color:#f2f2f2"> Возвращает размер объекта<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка группа<br></p>
+<p style="background-color:#f2f2f2">Param:  Целое порядковый номер объекта в группе начиная с 0<br></p>
+<p style="background-color:#f2f2f2">Return:  Число с плавающей точкой размер<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.objects</h1>
+<p style="background-color:#f2f2f2"> Возвращает количество объектов в группе<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка группа<br></p>
+<p style="background-color:#f2f2f2">Return:  Целое<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.groups</h1>
+<p style="background-color:#f2f2f2"> Возвращает количество групп<br></p>
+<p style="background-color:#f2f2f2">Return:  Целое<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.isgroup</h1>
+<p style="background-color:#f2f2f2"> Возвращает признак того что группа с именем уже есть<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка группа<br></p>
+<p style="background-color:#f2f2f2">Return:  Булевое true - группа существует<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.isobject</h1>
+<p style="background-color:#f2f2f2"> Возвращает признак того что объект с индексом в группе существует<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка группа<br></p>
+<p style="background-color:#f2f2f2">Param:  Целое порядковый номер объекта в группе начиная с 0<br></p>
+<p style="background-color:#f2f2f2">Return:  Булевое true - объект по данному индексу существует существует<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.colorclear</h1>
+<p style="background-color:#f2f2f2"> Установка цвета заднего фона<br></p>
+<p style="background-color:#f2f2f2">Param:  Целое r(0-255)<br></p>
+<p style="background-color:#f2f2f2">Param:  Целое g(0-255)<br></p>
+<p style="background-color:#f2f2f2">Param:  Целое b(0-255)<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.getposcam</h1>
+<p style="background-color:#f2f2f2"> Возвращает положение камеры в экранных координатах<br></p>
+<p style="background-color:#f2f2f2">Return:  Целое x координата<br></p>
+<p style="background-color:#f2f2f2">Return:  Целое н координата<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.setback</h1>
+<p style="background-color:#f2f2f2"> Установка текстуры заднего фона - имя файла с расширением png, jpg или jpeg<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка имя файла<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.getpos</h1>
+<p style="background-color:#f2f2f2"> Возвращает координаты объекта в оконных координатах с нулем в верхнем левом углу<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка группа<br></p>
+<p style="background-color:#f2f2f2">Param:  Целое порядковый номер объекта в группе начиная с 0<br></p>
+<p style="background-color:#f2f2f2">Return:  Число с плавающей точкой положение по x<br></p>
+<p style="background-color:#f2f2f2">Return:  Число с плавающей точкой положение по y<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.showobject</h1>
+<p style="background-color:#f2f2f2"> Показывает или скрывает объект. Скрытый объект все равно учавствует в функциях "getcross", "getfore"<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка группа<br></p>
+<p style="background-color:#f2f2f2">Param:  Целое порядковый номер объекта в группе начиная с 0<br></p>
+<p style="background-color:#f2f2f2">Param:  Булеое true - показать, false - скрыть<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.showobjects</h1>
+<p style="background-color:#f2f2f2"> Показывает или скрывает группу объектов. Скрытый объект все равно учавствует в функциях "getcross", "getfore"<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка группа<br></p>
+<p style="background-color:#f2f2f2">Param:  Булеое true - показать, false - скрыть<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.addimage</h1>
+<p style="background-color:#f2f2f2"> Загружает изображение в видео память. Рекомендуется вызывать перед использованием изображения<br></p>
+<p style="background-color:#f2f2f2">Param:  Абсолютный или относительный путь к изорражению<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.delimage</h1>
+<p style="background-color:#f2f2f2"> Выгружает изображение из видео памяти<br></p>
+<p style="background-color:#f2f2f2">Param:  Абсолютный или относительный путь к изорражению<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.getfore</h1>
+<p style="background-color:#f2f2f2"> Ищет препядствие на пути объекта в направлении вперед, среди объектов указанной группы.<br></p>
+<p style="background-color:#f2f2f2">Если препядствия не нашлось, возвращает nil. local index = game.getfore( "player", 0, "stones", 500 )<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка группа объекта на пути которого будет искаться препятствие в направлении вперед<br></p>
+<p style="background-color:#f2f2f2">Param:  Целое порядковый номер объекта в группе начиная с 0<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка группа объектов, выступающих в роли препядствий, среди которых будет искаться пересечение<br></p>
+<p style="background-color:#f2f2f2">Param:  Число с плавающей точкой максимальная дистанция поиска <br></p>
+<p style="background-color:#f2f2f2">Return:  Целое индекс ближайшего элеиента из группы или nil, если пересечения нет <br></p>
+<p style="background-color:#f2f2f2">Return:  Расстояние до центра или nil, если пересечения нет<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.getcross</h1>
+<p style="background-color:#f2f2f2"> Определяет есть ли пересечение с одним из объектов группы<br></p>
+<p style="background-color:#f2f2f2">Param:  x координата<br></p>
+<p style="background-color:#f2f2f2">Param:  y координата<br></p>
+<p style="background-color:#f2f2f2">Param:  Строка группа объектов, среди которых будет искаться пересечение<br></p>
+<p style="background-color:#f2f2f2">Return:  Целое индекс ближайшего элемента из группы или nil, если пересечения нет<br></p>
+<p style="background-color:#f2f2f2">Return:  Расстояние до центра или nil, если пересечения нет<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.windowsize</h1>
+<p style="background-color:#f2f2f2"> Возвращает размеры окна<br></p>
+<p style="background-color:#f2f2f2">Return:  Целое длина<br></p>
+<p style="background-color:#f2f2f2">Return:  Целое высота<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.windowpos</h1>
+<p style="background-color:#f2f2f2"> Возвращает положение окна в экранных координатах<br></p>
+<p style="background-color:#f2f2f2">Return:  Целое x<br></p>
+<p style="background-color:#f2f2f2">Return:  Целое y<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.mousepos</h1>
+<p style="background-color:#f2f2f2"> Возвращает положение курсора мыши в оконных координатах<br></p>
+<p style="background-color:#f2f2f2">Return:  Целое x<br></p>
+<p style="background-color:#f2f2f2">Return:  Целое y<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.addsound</h1>
+<p style="background-color:#f2f2f2"> Добавляет WAV файл для будущего воспроизведения(без удаления загружено может быть максимум 255 файлов )<br></p>
+<p style="background-color:#f2f2f2">Return:  Строка Путь к файлу абсолютный или относительный<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.clearsound</h1>
+<p style="background-color:#f2f2f2"> Удаляет все звуки из листа вопроизведения<br></p>
+<p style="background-color:#f2f2f2">Return:  Строка Путь к файлу абсолютный или относительный<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.playsound</h1>
+<p style="background-color:#f2f2f2"> Начинает воспроизведение WAV файла для воспроизведения необходимо добавить сначала его в список, вызвав game.addsound()<br></p>
+<p style="background-color:#f2f2f2">game.playsound("shoot.wav")<br></p>
+<p style="background-color:#f2f2f2">Return:  Строка Путь к файлу абсолютный или относительный<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.stopsound</h1>
+<p style="background-color:#f2f2f2"> Останавливает воспроизведение WAV файла. game.stopsound("shoot.wav")<br></p>
+<p style="background-color:#f2f2f2">Return:  Строка Путь к файлу абсолютный или относительный<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> game.isplaying</h1>
+<p style="background-color:#f2f2f2"> Возвращает признак проигрывания файла. Удобно, когда playsound приходится вызывать в циклах. Звук тогда воспроизводится только вначале, а проверив isplaying можно не вызывать playsound пока не воспроизведется до конца <br></p>
+<p style="background-color:#f2f2f2">if game.ispalying("звуковой_файл") == false then<br></p>
+<p style="background-color:#f2f2f2">    game.playsound("звуковой_файл")<br></p>
+<p style="background-color:#f2f2f2">end<br></p>
+<p style="background-color:#f2f2f2">Return:  Булевое true - файл проигрывается в данный момент<br></p>
+</head>
+<body>

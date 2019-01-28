@@ -1,0 +1,16 @@
+/*
+	Материалл заливки объекта цветом
+*/
+
+v_shader
+{	
+	file {"v_fill.glsl"},
+	auto#fMat4#cam{"cameraView"},	
+	
+},
+f_shader
+{	
+	file {"f_fill.glsl"},
+	manual#fVec4#color{ 1.0, 0.0, 0.0, 0.0 },		
+	
+}

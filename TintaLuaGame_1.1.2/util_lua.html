@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html>
+<meta charset="utf - 8"> 
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> util.getval</h1>
+<p style="background-color:#f2f2f2"> Returns value from tree config file<br></p>
+<p style="background-color:#f2f2f2">Param:  String  - path<br></p>
+<p style="background-color:#f2f2f2">Param:  String  - request<br></p>
+<p style="background-color:#f2f2f2">Param:  String  - type return("double","string","bool")<br></p>
+<p style="background-color:#f2f2f2">Return:  Real,String,bool<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> util.cpucores</h1>
+<p style="background-color:#f2f2f2"> Returns CPU cores<br></p>
+<p style="background-color:#f2f2f2">Return:  cpu avalible cores<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> util.msg</h1>
+<p style="background-color:#f2f2f2">	 Prints msg to the console and into the log file if used one<br></p>
+<p style="background-color:#f2f2f2">Param:  Bool,String,Number - parameters comma separated  e.g.(  util.msg("test",100,true) )<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> util.msgf</h1>
+<p style="background-color:#f2f2f2">	Prints message into the log file<br></p>
+<p style="background-color:#f2f2f2">Param:  Bool,String,Number parameters comma separated e.g.( util.msgf("test",100,true) )<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> util.bytetofloat</h1>
+<p style="background-color:#f2f2f2">	converts byte value to the float<br></p>
+<p style="background-color:#f2f2f2">Param:  byte value<br></p>
+<p style="background-color:#f2f2f2">Return:  - Real data<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> util.floattobyte</h1>
+<p style="background-color:#f2f2f2">	Converts float value to the byte<br></p>
+<p style="background-color:#f2f2f2">Param:  Real value<br></p>
+<p style="background-color:#f2f2f2">Return:  - byte data<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> util.linterp</h1>
+<p style="background-color:#f2f2f2">	Implements linear interpolation<br></p>
+<p style="background-color:#f2f2f2">Param:  Real param value<br></p>
+<p style="background-color:#f2f2f2">Param:  Real param value<br></p>
+<p style="background-color:#f2f2f2">Param:  Real param value[0,1]<br></p>
+<p style="background-color:#f2f2f2">Return:  - Real<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> util.cosinterp</h1>
+<p style="background-color:#f2f2f2">	Implements Cos interpolation<br></p>
+<p style="background-color:#f2f2f2">Param:  Real param value<br></p>
+<p style="background-color:#f2f2f2">Param:  Real param value<br></p>
+<p style="background-color:#f2f2f2">Param:  Real param value[0,1]<br></p>
+<p style="background-color:#f2f2f2">Return:  - Real<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> util.cubeinterp</h1>
+<p style="background-color:#f2f2f2">	Implements Cubic interpolation<br></p>
+<p style="background-color:#f2f2f2">Param:  param value<br></p>
+<p style="background-color:#f2f2f2">Param:  param value<br></p>
+<p style="background-color:#f2f2f2">Param:  param value<br></p>
+<p style="background-color:#f2f2f2">Param:  param value<br></p>
+<p style="background-color:#f2f2f2">Param:  param value[0,1]<br></p>
+<p style="background-color:#f2f2f2">Return:  - Real<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> util.smoothstep</h1>
+<p style="background-color:#f2f2f2">	Implements smooth step function<br></p>
+<p style="background-color:#f2f2f2">Param:  Real param<br></p>
+<p style="background-color:#f2f2f2">Param:  Real param<br></p>
+<p style="background-color:#f2f2f2">Param:  Real param<br></p>
+<p style="background-color:#f2f2f2">Return:  - Real<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> util.sleep</h1>
+<p style="background-color:#f2f2f2">	Send to sleep executing thread<br></p>
+<p style="background-color:#f2f2f2">Param:  UInt - time ms<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> util.countfiles</h1>
+<p style="background-color:#f2f2f2">	Returns files quantity by the condition<br></p>
+<p style="background-color:#f2f2f2">Param:  String - absolute path to directory where to count<br></p>
+<p style="background-color:#f2f2f2">Param:  String = "" - extension<br></p>
+<p style="background-color:#f2f2f2">Return:  Int quantity<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> util.getfile</h1>
+<p style="background-color:#f2f2f2">	Returns file by the condition in directory<br></p>
+<p style="background-color:#f2f2f2">Param:  String -  absolute path to directory where to find<br></p>
+<p style="background-color:#f2f2f2">Param:  UInt - position of file in list for iterating using c_countfiles<br></p>
+<p style="background-color:#f2f2f2">Param:  String = "" - extension<br></p>
+<p style="background-color:#f2f2f2">Param:  Bool ;- if false returns full path to file, if true only filename<br></p>
+<p style="background-color:#f2f2f2">Return:  quantity<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> util.getdirectory</h1>
+<p style="background-color:#f2f2f2">	Returns directory by the condition<br></p>
+<p style="background-color:#f2f2f2">Param:  - absolute path to directory where to find<br></p>
+<p style="background-color:#f2f2f2">Param:  - position of file in list for iterating using c_countfiles<br></p>
+<p style="background-color:#f2f2f2">Param:  - if true returns full path to file, if false only full filename<br></p>
+<p style="background-color:#f2f2f2">Return:  quantity<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> util.countdirectories</h1>
+<p style="background-color:#f2f2f2">	Returns directories quantity by the condition<br></p>
+<p style="background-color:#f2f2f2">Param:  - absolute path to directory	where to count<br></p>
+<p style="background-color:#f2f2f2">Return:  quantity<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> util.isdirectory</h1>
+<p style="background-color:#f2f2f2">	Determine if the path is directory<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> util.pow</h1>
+<p style="background-color:#f2f2f2">	pow function<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> util.packcolor</h1>
+<p style="background-color:#f2f2f2">	Packs from byte form R G B into the unsigned form 0x00000<br></p>
+<p style="background-color:#f2f2f2">Param:   byte R value<br></p>
+<p style="background-color:#f2f2f2">Param:   byte G value<br></p>
+<p style="background-color:#f2f2f2">Param:   byte B value<br></p>
+<p style="background-color:#f2f2f2">Return:   - unsigned packed result<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> util.unpackcolor</h1>
+<p style="background-color:#f2f2f2">	Unpacks the unsigned form 0 in to the byte form R G B<br></p>
+<p style="background-color:#f2f2f2">Param:   - unsigned packed value<br></p>
+<p style="background-color:#f2f2f2">Return:   byte R result<br></p>
+<p style="background-color:#f2f2f2">Return:   byte G result<br></p>
+<p style="background-color:#f2f2f2">Return:   byte B result<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> util.rgbtohsl</h1>
+<p style="background-color:#f2f2f2">	Converts RGB to HSL<br></p>
+<p style="background-color:#f2f2f2">        H - colors hue (0-360), 0 - red<br></p>
+<p style="background-color:#f2f2f2">        S - saturation (0-1)<br></p>
+<p style="background-color:#f2f2f2">        L - lightness (0-1)<br></p>
+<p style="background-color:#f2f2f2">Param:  Real r<br></p>
+<p style="background-color:#f2f2f2">Param:  Real g<br></p>
+<p style="background-color:#f2f2f2">Param:  Real b<br></p>
+<p style="background-color:#f2f2f2">Return:  Real h<br></p>
+<p style="background-color:#f2f2f2">Return:  Real s<br></p>
+<p style="background-color:#f2f2f2">Return:  Real l<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> util.hsltorgb</h1>
+<p style="background-color:#f2f2f2">	Converts HSL to RGB<br></p>
+<p style="background-color:#f2f2f2">        H - colors hue (0-360), 0 - red<br></p>
+<p style="background-color:#f2f2f2">        S - saturation (0-1)<br></p>
+<p style="background-color:#f2f2f2">        L - lightness (0-1)<br></p>
+<p style="background-color:#f2f2f2">Param:  Real h<br></p>
+<p style="background-color:#f2f2f2">Param:  Real s<br></p>
+<p style="background-color:#f2f2f2">Param:  Real l<br></p>
+<p style="background-color:#f2f2f2">Return:  Real r<br></p>
+<p style="background-color:#f2f2f2">Return:  Real g<br></p>
+<p style="background-color:#f2f2f2">Return:  Real b<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> util.fromdegtorad</h1>
+<p style="background-color:#f2f2f2">	Converts angle from degree to radians<br></p>
+<p style="background-color:#f2f2f2">Param:  Real angle<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> util.fromradtodeg</h1>
+<p style="background-color:#f2f2f2">	Converts angle from radians to degree<br></p>
+<p style="background-color:#f2f2f2">Param:  Real angle<br></p>
+<p><br></p>
+<p><br></p><h1 style="background-color:#f2f2f2"> util.regexmatch</h1>
+<p style="background-color:#f2f2f2">	Finds matches using regular expressions<br></p>
+<p style="background-color:#f2f2f2">Param:  string regular expression<br></p>
+<p style="background-color:#f2f2f2">Param:  string text<br></p>
+<p style="background-color:#f2f2f2">Param:  int match mask:<br></p>
+<p style="background-color:#f2f2f2">        match_default = 0x0000,<br></p>
+<p style="background-color:#f2f2f2">        match_not_bol = 0x0001,<br></p>
+<p style="background-color:#f2f2f2">        match_not_eol = 0x0002,<br></p>
+<p style="background-color:#f2f2f2">        match_not_bow = 0x0004,<br></p>
+<p style="background-color:#f2f2f2">        match_not_eow = 0x0008,<br></p>
+<p style="background-color:#f2f2f2">        match_any = 0x0010,<br></p>
+<p style="background-color:#f2f2f2">        match_not_null = 0x0020,<br></p>
+<p style="background-color:#f2f2f2">        match_continuous = 0x0040,<br></p>
+<p style="background-color:#f2f2f2">        _Match_partial = 0x0080,<br></p>
+<p style="background-color:#f2f2f2">        match_prev_avail = 0x0100,<br></p>
+<p style="background-color:#f2f2f2">        format_default = 0x0000,<br></p>
+<p style="background-color:#f2f2f2">        format_sed = 0x0400,<br></p>
+<p style="background-color:#f2f2f2">        format_no_copy = 0x0800,<br></p>
+<p style="background-color:#f2f2f2">        format_first_only = 0x1000,<br></p>
+<p style="background-color:#f2f2f2">        _Match_not_null = 0x2000<br></p>
+<p style="background-color:#f2f2f2">Return:  int matches count<br></p>
+</head>
+<body>
